@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>amazon api</title>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript" src="ama_functions.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, Tahoma, Verdana;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .res-container {
+      width: 165px;
+      height: 350px;
+      border: 1px solid #cfcfcf;
+      padding: 10px;
+      text-align: center;
+      float: left;
+      margin-left: 10px;
+      margin-top: 10px;
+    }
+
+    .res-container h2 {
+      padding: 0px;
+      margin: 0 0 10px 0;
+      height: 115px;
+    }
+
+    .res-container h2 a {
+      color: #000;
+    }
+
+    #search-bar {
+      width: 100%;
+      background: #d3d3d3;
+      border-bottom: 1px solid #000;
+      margin-bottom: 30px;
+      height: 70px;
+    }
+
+    #search-bar input, select {
+      width: 300px;
+      font-size: 15px;
+      font-weight: bold;
+      border: 0px dashed #000;
+      padding: 10px;
+    }
+
+    #search-bar select {
+      width: 100px !important;
+    }
+
+    #page {
+      width: 20px !important;
+    }
+
+    #results, #search-bar {
+      padding-top: 20px;
+      padding-left: 30px;
+    }
+
+    #search-link {
+      font-size: 25px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    span.caption {
+      margin-left: 30px;
+      font-size: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="search-bar">
+    <span class="caption" style="margin-left: 2px !important">Search:</span>
+    <input type="text" name="search" id="search">
+
+    <span class="caption">Category:</span>
+    <select name="category" id="category">
+      <option value="ALL">ALL</option>
+      <option value="Books">Books</option>
+      <option value="DVD">DVD</option>
+      <option value="Apparel">Apparel</option>
+      <option value="Automotive">Automotive</option>
+      <option value="Electronics">Electronics</option>
+      <option value="GourmetFood">GourmetFood</option>
+      <option value="Kitchen">Kitchen</option>
+      <option value="Music">Music</option>
+      <option value="PCHardware">PCHardware</option>
+      <option value="PetSupplies">PetSupplies</option>
+      <option value="Software">Software</option>
+      <option value="SoftwareVideoGames">SoftwareVideoGames</option>
+      <option value="SportingGoods">SportingGoods</option>
+      <option value="Tools">Tools</option>
+      <option value="Toys">Toys</option>
+      <option value="VHS">VHS</option>
+      <option value="VideoGames">VideoGames</option>
+    </select>
+
+    <span class="caption">Country:</span>
+    <select name="country" id="country">
+      <option value="de">DE</option>
+      <option value="com">USA</option>
+      <option value="co.uk">ENG</option>
+      <option value="ca">CA</option>
+      <option value="fr">FR</option>
+      <option value="co.jp">JP</option>
+      <option value="it">IT</option>
+      <option value="cn">CN</option>
+      <option value="es">ES</option>
+    </select>
+
+    <span class="caption">Browse page:</span>
+    <input type="text" name="page" id="page" value="1">
+
+    <a href="#" id="search-link">Search</a>
+  </div>
+
+  <div id="results"></div>
+</body>
+</html>
